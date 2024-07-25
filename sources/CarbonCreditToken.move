@@ -3,7 +3,9 @@ module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::Carbo
     use aptos_framework::coin::register;
     use aptos_framework::coin::transfer;
     use aptos_framework::aptos_account::AptosAccount;
-
+    use aptos_framework::signer;
+    use aptos_framework::debug;
+    
     struct CarbonCreditToken has copy, drop, store {
         id: u64,
         amount: u64,
@@ -11,7 +13,7 @@ module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::Carbo
         owner: address,
     }
 
-    resource struct TokenManager {
+    struct TokenManager has key {
         next_id: u64,
     }
 
@@ -36,13 +38,13 @@ module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::Carbo
     }
 
     public fun transfer(account: &signer, to: address, token_id: u64) {
-        let token = borrow_global_mut<CarboCreditToken>(signer::address_of(account), token_id);
+        let token = borrow_global_mut<CarbonCreditToken>(signer::address_of(account), token_id);
         assert!(token.owner == signer::address_of(account), 1);
         token.owner = to;
     }
 
     public fun get_token_details(account: &signer, token_id: u64): (u64, u64, vector<u8>, address) {
-        let token = borrow_global<CarboCreditToken>(signer::address_of(account), token_id);
+        let token = borrow_global<CarbonCreditToken>(signer::address_of(account), token_id);
         (token.id, token.amount, token.description, token.owner)
     }
 }

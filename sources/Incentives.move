@@ -2,8 +2,10 @@ module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::Incen
     use aptos_framework::coin::Coin;
     use aptos_framework::aptos_account::AptosAccount;
     use aptos_framework::aptos_coin::AptosCoin;
+    use aptos_framework::signer;
+    use aptos_framework::transfer;
 
-    resource struct RewardPool {
+    struct RewardPool has key {
         total_rewards: u64,
         distributed_rewards: u64,
     }

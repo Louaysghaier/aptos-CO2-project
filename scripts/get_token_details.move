@@ -1,7 +1,6 @@
 script {
-    use 0x1::Account;
-    use 0x1::String;
-    use CarbonCreditToken;
+        use 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::CarbonCreditToken;
+
 
     fun main(account: &signer, token_id: u64) {
         let (id, amount, description, owner) = CarbonCreditToken::get_token_details(account, token_id);

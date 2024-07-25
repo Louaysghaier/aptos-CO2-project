@@ -1,6 +1,7 @@
 module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::Marketplace {
     use aptos_framework::coin::Coin;
-    use aptos_framework::coin::transfer;
+    use aptos_framework::transfer;
+    use aptos_framework::signer;
     use 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::CarbonCreditToken;
 
     struct Listing has copy, drop, store {
@@ -9,7 +10,7 @@ module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::Marke
         seller: address,
     }
 
-    resource struct Marketplace {
+    struct Marketplace has key {
         listings: vector<Listing>,
     }
 
