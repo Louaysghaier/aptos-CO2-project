@@ -1,5 +1,5 @@
 //2. Decentralized Marketplace: Peer-to-peer marketplace for trading carbon credits.
-module {{addresses.GreenChain}}::Marketplace {
+module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::Marketplace {
     use aptos_framework::coin::Coin;
     use aptos_framework::coin::transfer;
     use {{addresses.GreenChain}}::CarbonCreditToken;

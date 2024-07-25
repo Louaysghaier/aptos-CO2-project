@@ -1,5 +1,5 @@
 //4. Incentive Mechanisms: Reward systems for carbon-reducing activities.
-module {{addresses.GreenChain}}::Incentives {
+module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::Incentives {
     use aptos_framework::coin::Coin;
     use aptos_framework::aptos_account::AptosAccount;
     use aptos_framework::aptos_coin::AptosCoin;

@@ -1,6 +1,6 @@
 //1. Carbon Credit Tokenization: Convert carbon credits into digital tokens.
 
-module {{addresses.GreenChain}}::CarbonCreditToken {
+module 0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7::CarbonCreditToken {
     use aptos_framework::coin::Coin;
     use aptos_framework::coin::register;
     use aptos_framework::coin::transfer;
