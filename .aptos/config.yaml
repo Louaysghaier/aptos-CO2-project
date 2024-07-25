@@ -1,0 +1,9 @@
+---
+profiles:
+  GreenChain:
+    network: Devnet
+    private_key: "0x27564be16ae3009c28c419066188234d2b4d2bbb587235c64f2668048d264ef4"
+    public_key: "0x6b2002ccbada46e615ecbab875ff3e04ac0d32b4b4c7950891203f677663a1dc"
+    account: 98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7
+    rest_url: "https://fullnode.devnet.aptoslabs.com"
+    faucet_url: "https://faucet.devnet.aptoslabs.com"

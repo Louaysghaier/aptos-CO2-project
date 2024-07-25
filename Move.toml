@@ -1,0 +1,17 @@
+[package]
+name = "GreenChain"
+version = "1.0.0"
+authors = []
+
+[addresses]
+GreenChain = "0x98fed12532a6876d42810bd3e94a044f83b00c1dff1b8e2fabe53179945007c7"
+
+[dev-addresses]
+default = "0xBEEF"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
